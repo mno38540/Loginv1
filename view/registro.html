@@ -1,0 +1,40 @@
+<div class="modal fade" id="reg" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modalTitle" style="text-align: center;">Formato de registro</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Complete los campos a continuacion para realizar el registro de su cuenta</p>
+                <form action="controller/registro.php" method="post">
+                    <table>
+                        <tbody>
+                        <tr style="width: 100%;">
+                            <td><input type="text" name="fname" placeholder="primer nombre" class="form-control" required> </td>
+                            <td><input type="text" name="sname" placeholder="Segundo nombre" class="form-control" required> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="last1" placeholder="Primer apeliido" class="form-control" required></td>
+                            <td><input type="text" name="last2" placeholder="Segundo apellido" class="form-control" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" name="email" placeholder="Correo@correo.com" class="form-control" required></td>
+                            <td><input type="date" name="born" placeholder="Fecha de nacimiento" class="form-control" required></td>
+                        </tr>
+
+                    <input type="text" name="usu" placeholder="Usuario" class="form-control" required>
+                    <input type="password" name="pas" placeholder="Contraseña" class="form-control" required>
+                </tbody>
+                </table>
+                
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <input type="submit" class="btn btn-success" style="margin: 0.9rem;">
+            </form>
+            </div>
+        </div>
+
+    </div>
+</div>
