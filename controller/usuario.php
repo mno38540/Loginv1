@@ -5,10 +5,10 @@ include "../model/conexion.php";
     $usuario = $_POST['usu'];
     $pas = $_POST['pas'];
 
-    $sql = "INSERT INTO deportistas (usu , pas )
+    $ = "SELECT  INTO registro (usu , pas )
                     VALUE ('$usuario' ,MD5('$pas'))";
 
-    $result = mysqli_query($conexion , $sql) or die ( "Error al realiar la insercion" .mysql_error($conexion));
+    $result = mysqli_query($conexion , $sql) or die ( "Error al realiar la insercion" .mysqli_error($conexion));
 
 
 }

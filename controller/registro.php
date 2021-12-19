@@ -2,18 +2,26 @@
 
 if ($_POST){
 include "../model/conexion.php";
+    $fname = $_POST['fname'];
+    $sname = $_POST['sname'];
+    $last1 = $_POST['last1'];
+    $last2 = $_POST['last2'];
+    $email = $_POST['email'];
+    $fecha = $_POST['born'];
+    $email = $_POST['email'];
     $usuario = $_POST['usu'];
     $pas = $_POST['pas'];
 
-    $sql = "INSERT INTO registro ( ,  )
-                    VALUE ('' ,'','','','')";
-    
-    $sqlu = "INSERT INTO deportista (usu , pas )
-    VALUE ('$usuario' ,MD5('$pas'))";
+    $sql = "INSERT INTO registro (fname,sname,last1,last2,email,fecha,usu , pas )
+                    VALUE ('$fname','$sname','$last1','$last2','$email','$fecha','$usuario' ,MD5('$pas'))";
 
-    $result = mysqli_query($conexion , $sql, $sqlu) or die ( "Error al realiar la insercion" .mysql_error($conexion));
-
-
+    $result = mysqli_query($conexion , $sql) or die ( "Error al realiar la insercion" .mysqli_error($conexion));
+        header('location: alerts.php?insert=true');
 }
+
+/*
+
+
+*/
 
 ?>

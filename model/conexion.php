@@ -1,8 +1,8 @@
 <?php
 $servidor= 'localhost';
-$usuario = 'root';
-$clave= '';
-$bd= 'nutriarchery';
+$usuario = 'loggin';
+$clave= 'sqlserver';
+$bd= 'practica';
 
 $conexion = mysqli_connect($servidor,$usuario,$clave,$bd);
 
