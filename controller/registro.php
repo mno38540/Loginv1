@@ -13,15 +13,11 @@ include "../model/conexion.php";
     $pas = $_POST['pas'];
 
     $sql = "INSERT INTO registro (fname,sname,last1,last2,email,fecha,usu , pas )
-                    VALUE ('$fname','$sname','$last1','$last2','$email','$fecha','$usuario' ,MD5('$pas'))";
+                    VALUE ('$fname','$sname','$last1','$last2','$email','$fecha','$usuario' ,'$pas')";
 
-    $result = mysqli_query($conexion , $sql) or die ( "Error al realiar la insercion" .mysqli_error($conexion));
+    $result = mysqli_query($conexion , $sql) or die ("Error al realiar la insercion" .mysqli_error($conexion));
         header('location: alerts.php?insert=true');
 }
 
-/*
-
-
-*/
 
 ?>

@@ -1,8 +1,9 @@
 <?php
-include "../view/head.html";
+include "../index.php";
 
 if ($_GET) {
     if (@$_GET['insert'] == true) {
+        header("location: ../index.php");
         echo "<div style='width:60%;' class='alert alert-success' role='alert'>
         Registro <b>Creada</b> Exitosamente!
         </div>";
@@ -16,6 +17,5 @@ if ($_GET) {
         </div>";
     }
 }
-include "../view/log.html";
-include "../view/footer.html";
+
 ?>
