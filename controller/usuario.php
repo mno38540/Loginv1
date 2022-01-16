@@ -18,7 +18,7 @@ $filas=mysqli_num_rows($result);
 
 if($filas){
   
-    header("location:../view/home.html");
+    header("location:../view/home.php?usu");
 
 }else{
     ?>
@@ -34,4 +34,3 @@ if($filas){
   <?php
 }
 mysqli_free_result($result);
-mysqli_close($conexion);
